@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/appidcdc6bb8371/!svn/ver/3/crm/src/com/fc/framework/web/action
+END
+RoleAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/appidcdc6bb8371/!svn/ver/7/crm/src/com/fc/framework/web/action/RoleAction.java
+END
+ModuleAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/appidcdc6bb8371/!svn/ver/3/crm/src/com/fc/framework/web/action/ModuleAction.java
+END
+RoleModuleAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/appidcdc6bb8371/!svn/ver/13/crm/src/com/fc/framework/web/action/RoleModuleAction.java
+END
+LoginAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/appidcdc6bb8371/!svn/ver/7/crm/src/com/fc/framework/web/action/LoginAction.java
+END
+UserAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/appidcdc6bb8371/!svn/ver/3/crm/src/com/fc/framework/web/action/UserAction.java
+END
+UserRoleAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/appidcdc6bb8371/!svn/ver/3/crm/src/com/fc/framework/web/action/UserRoleAction.java
+END

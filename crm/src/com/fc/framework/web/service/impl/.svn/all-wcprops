@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/appidcdc6bb8371/!svn/ver/3/crm/src/com/fc/framework/web/service/impl
+END
+UserServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/appidcdc6bb8371/!svn/ver/3/crm/src/com/fc/framework/web/service/impl/UserServiceImpl.java
+END
+UserRoleServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/appidcdc6bb8371/!svn/ver/3/crm/src/com/fc/framework/web/service/impl/UserRoleServiceImpl.java
+END
+RoleServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/appidcdc6bb8371/!svn/ver/5/crm/src/com/fc/framework/web/service/impl/RoleServiceImpl.java
+END
+ModuleServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/appidcdc6bb8371/!svn/ver/5/crm/src/com/fc/framework/web/service/impl/ModuleServiceImpl.java
+END
+RoleModuleServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/appidcdc6bb8371/!svn/ver/5/crm/src/com/fc/framework/web/service/impl/RoleModuleServiceImpl.java
+END

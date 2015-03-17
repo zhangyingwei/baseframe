@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/appidcdc6bb8371/!svn/ver/3/crm/src/com/fc/framework/web/service
+END
+UserService.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/appidcdc6bb8371/!svn/ver/3/crm/src/com/fc/framework/web/service/UserService.java
+END
+UserRoleService.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/appidcdc6bb8371/!svn/ver/3/crm/src/com/fc/framework/web/service/UserRoleService.java
+END
+RoleService.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/appidcdc6bb8371/!svn/ver/6/crm/src/com/fc/framework/web/service/RoleService.java
+END
+ModuleService.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/appidcdc6bb8371/!svn/ver/6/crm/src/com/fc/framework/web/service/ModuleService.java
+END
+RoleModuleService.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/appidcdc6bb8371/!svn/ver/10/crm/src/com/fc/framework/web/service/RoleModuleService.java
+END

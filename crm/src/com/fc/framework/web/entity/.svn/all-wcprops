@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/appidcdc6bb8371/!svn/ver/3/crm/src/com/fc/framework/web/entity
+END
+UserRole.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/appidcdc6bb8371/!svn/ver/3/crm/src/com/fc/framework/web/entity/UserRole.java
+END
+Role.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/appidcdc6bb8371/!svn/ver/3/crm/src/com/fc/framework/web/entity/Role.java
+END
+Module.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/appidcdc6bb8371/!svn/ver/3/crm/src/com/fc/framework/web/entity/Module.java
+END
+RoleModule.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/appidcdc6bb8371/!svn/ver/11/crm/src/com/fc/framework/web/entity/RoleModule.java
+END
+User.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/appidcdc6bb8371/!svn/ver/3/crm/src/com/fc/framework/web/entity/User.java
+END

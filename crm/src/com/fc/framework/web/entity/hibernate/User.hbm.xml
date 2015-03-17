@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+   <class name="com.fc.framework.web.entity.User" table="t_userinfo" lazy="false">
+     <id name="userid">
+       <generator class="native"></generator>
+     </id>
+     <property name="username"></property>
+     <property name="password"></property>
+     <property name="realname"></property>
+     <property name="sex"></property>
+     <property name="age"></property>
+     <property name="mail"></property>
+     <property name="phonenum"></property>
+     <property name="state"></property>
+     <property name="createdate"></property>
+   </class>
+</hibernate-mapping>

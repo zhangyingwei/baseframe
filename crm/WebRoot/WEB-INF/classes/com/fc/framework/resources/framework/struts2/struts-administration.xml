@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC 
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="admin" extends="struts-default">
+		
+		<action name="login" class="loginAction" method="login">
+			<result name="success">/webpages/frame/index.jsp</result>
+			<result name="error" type="redirect">/</result>
+		</action>
+		<action name="tomenu" class="moduleAction" method="findAllModule">
+			<result name="success">/webpages/frame/menu/show.jsp</result>
+		</action>
+		<action name="toaddmodule" class="moduleAction" method="toAddModule">
+			<result name="success">/webpages/frame/menu/add.jsp</result>
+		</action>
+		<action name="addmodule" class="moduleAction" method="addModule">
+			<result name="success" type="redirectAction">tomenu.do</result>
+		</action>
+		<action name="delmodule" class="moduleAction" method="delModule">
+			<result name="success" type="redirectAction">tomenu.do</result>
+		</action>
+		<action name="editmodule" class="moduleAction" method="findById">
+			<result name="success">/webpages/frame/menu/edit.jsp</result>
+		</action>
+		<action name="updatemodule" class="moduleAction" method="updateModule">
+			<result name="success" type="redirectAction">tomenu.do</result>
+		</action>
+		
+		<!-- user -->
+		<action name="showuser" class="userAction" method="findAllUser">
+			<result name="success">/webpages/frame/user/show.jsp</result>
+		</action>
+		<action name="toadd" class="userAction" method="toAdd">
+			<result name="success">/webpages/frame/user/add.jsp</result>
+		</action>
+		<action name="adduser" class="userAction" method="addUser">
+			<result name="success" type="redirectAction">showuser.do</result>
+		</action>
+		<action name="toedit" class="userAction" method="toEditUser">
+			<result name="success">/webpages/frame/user/edit.jsp</result>
+		</action>
+		<action name="update" class="userAction" method="editUser">
+			<result name="success" type="redirectAction">showuser.do</result>
+		</action>
+		<action name="deluser" class="userAction" method="delUserByChangeState">
+			<result name="success" type="redirectAction">showuser.do</result>
+		</action>
+		<action name="deleteuser" class="userAction" method="delUser">
+			<result name="success" type="redirectAction">showuser.do</result>
+		</action>
+		<action name="role2user" class="userAction" method="role2User">
+			<result name="success">/webpages/frame/user/user2role.jsp</result>
+		</action>
+		
+		<!-- UserRole -->
+		<action name="adduserrole" class="userRoleAction" method="addUserRole">
+			<result name="success" type="redirectAction">showuser.do</result>
+		</action>
+		
+		<!-- Role -->
+		<action name="showroles" class="roleAction" method="findAllRole">
+			<result name="success">/webpages/frame/role/show.jsp</result>
+		</action>
+		<action name="toroleadd" class="roleAction" method="toRoleAdd">
+			<result name="success">/webpages/frame/role/add.jsp</result>
+		</action>
+		<action name="roleadd" class="roleAction" method="roleAdd">
+			<result name="success" type="redirectAction">showroles.do</result>
+		</action>
+		<action name="toeditrole" class="roleAction" method="toEditRole">
+			<result name="success">/webpages/frame/role/edit.jsp</result>
+		</action>
+		<action name="editrole" class="roleAction" method="editRole">
+			<result name="success" type="redirectAction">showroles.do</result>
+		</action>
+		<action name="delrole" class="roleAction" method="delRole">
+			<result name="success" type="redirectAction">showroles.do</result>
+		</action>
+		<action name="toaddmodule2role" class="roleAction" method="toAddModule2Role">
+			<result name="success">/webpages/frame/role/role2module.jsp</result>
+		</action>
+		
+		<!-- RoleModule -->
+		<action name="delmodule2role" class="roleModuleAction" method="delRoleModule" />
+		<action name="addmodule2role" class="roleModuleAction" method="addRoleModule" />
+		
+	</package>
+</struts>

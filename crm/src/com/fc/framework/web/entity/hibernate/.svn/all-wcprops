@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/appidcdc6bb8371/!svn/ver/3/crm/src/com/fc/framework/web/entity/hibernate
+END
+User.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/appidcdc6bb8371/!svn/ver/3/crm/src/com/fc/framework/web/entity/hibernate/User.hbm.xml
+END
+UserRole.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/appidcdc6bb8371/!svn/ver/3/crm/src/com/fc/framework/web/entity/hibernate/UserRole.hbm.xml
+END
+Role.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/appidcdc6bb8371/!svn/ver/3/crm/src/com/fc/framework/web/entity/hibernate/Role.hbm.xml
+END
+Module.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/appidcdc6bb8371/!svn/ver/3/crm/src/com/fc/framework/web/entity/hibernate/Module.hbm.xml
+END
+RoleModule.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/appidcdc6bb8371/!svn/ver/3/crm/src/com/fc/framework/web/entity/hibernate/RoleModule.hbm.xml
+END

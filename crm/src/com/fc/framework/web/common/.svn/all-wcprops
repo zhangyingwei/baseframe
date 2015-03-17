@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/appidcdc6bb8371/!svn/ver/3/crm/src/com/fc/framework/web/common
+END
+AppException.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/appidcdc6bb8371/!svn/ver/3/crm/src/com/fc/framework/web/common/AppException.java
+END
+ReturnMessage.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/appidcdc6bb8371/!svn/ver/3/crm/src/com/fc/framework/web/common/ReturnMessage.java
+END
+ActionReturn.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/appidcdc6bb8371/!svn/ver/3/crm/src/com/fc/framework/web/common/ActionReturn.java
+END
