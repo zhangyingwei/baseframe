@@ -4,9 +4,11 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
+import com.fc.framework.web.common.PageInfo;
 import com.fc.framework.web.common.ReturnMessage;
 import com.fc.framework.web.entity.Module;
 import com.fc.framework.web.entity.Role;
@@ -97,5 +99,17 @@ public class ModuleService extends BaseService implements ModuleServiceImpl {
 		List list = this.getHibernateTemplate().find(hql,parames);
 		rMessage.setListret(list);
 		return rMessage;
+	}
+
+	public ReturnMessage findPage(PageInfo pageInfo) throws Exception {
+		ReturnMessage rMessage = new ReturnMessage();
+		String hql = "from Module";
+		List list = super.findPageInfo(pageInfo, hql);
+		rMessage.setListret(list);
+		return rMessage;
+	}
+
+	public ReturnMessage getCounts() throws Exception {
+		return null;
 	}
 }

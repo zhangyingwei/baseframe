@@ -31,6 +31,15 @@ public class RoleAction extends BaseAction{
 		this.role = role;
 	}
 
+	public String findPage() throws Exception{
+		List list = roleService.findPage(super.getPageInfo()).getListret();
+		Map map = super.getReturnMap();
+		map.put("roles", list);
+		map.put("pageInfo", super.getPageInfo());
+		super.getRequest().setAttribute("map", map);
+		return ActionReturn.SUCC;
+	}
+	
 	public String findAllRole() throws Exception{
 		List list = roleService.findAllRole().getListret();
 		super.getRequest().setAttribute("roles", list);

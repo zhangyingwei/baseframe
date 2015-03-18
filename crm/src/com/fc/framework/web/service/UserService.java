@@ -8,6 +8,7 @@ import org.hibernate.Transaction;
 import org.hibernate.classic.Session;
 import org.springframework.stereotype.Service;
 
+import com.fc.framework.web.common.PageInfo;
 import com.fc.framework.web.common.ReturnMessage;
 import com.fc.framework.web.entity.User;
 import com.fc.framework.web.service.base.BaseService;
@@ -91,6 +92,14 @@ public class UserService extends BaseService implements UserServiceImpl{
 		Object[] parames = {user.getUserid()};
 		super.excuteHql(hql, parames);
 		rMessage.setSucc(true);
+		return rMessage;
+	}
+
+	public ReturnMessage findPage(PageInfo pageInfo) throws Exception {
+		ReturnMessage rMessage = new ReturnMessage();
+		String hql = "from User";
+		List list = super.findPageInfo(pageInfo, hql);
+		rMessage.setListret(list);
 		return rMessage;
 	}
 }

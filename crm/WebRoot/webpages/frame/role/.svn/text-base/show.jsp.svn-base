@@ -2,6 +2,7 @@
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+Map map = (Map)request.getAttribute("map");
 %>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
@@ -29,6 +30,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         function addmodule(id){
         	location.href="toaddmodule2role.do?role.roleid="+id;
         }
+        function page(i){
+			location.href="getrolepage.do?pageInfo.currentPage="+i;
+        }
     </script>
     <style type="text/css">
         .auto-style1 {
@@ -50,7 +54,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         </thead>
         <tbody>
         	<%
-        		List<Role> roles = (List<Role>)request.getAttribute("roles");
+        		List<Role> roles = (List<Role>)map.get("roles");
         		for(Role r:roles){
         			%>
 		            <tr class="even">
@@ -77,5 +81,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             </tr>
         </tbody>
     </table>
+    <%@include file="../common/fy.html" %>
 </body>
 </html>

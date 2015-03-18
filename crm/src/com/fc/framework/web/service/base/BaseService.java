@@ -11,6 +11,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 import com.fc.framework.web.common.AppException;
+import com.fc.framework.web.common.PageInfo;
 import com.fc.framework.web.common.ReturnMessage;
 
 public class BaseService extends HibernateDaoSupport{
@@ -101,5 +102,33 @@ public class BaseService extends HibernateDaoSupport{
 			throw new AppException("findByParams 出错！",e);
 		}
 		return obj;
+	}
+	
+	/**
+	 * 获取总条数
+	 * @param hql
+	 * @return
+	 * @throws Exception
+	 */
+	public Integer getCounts(String hql) throws Exception{
+		Integer count = 0;
+		List list = this.getHibernateTemplate().find(hql);
+		if(list.size()!=0){
+			Iterator it = list.iterator();
+			while(it.hasNext()){
+				it.next();
+				count++;
+			}
+		}
+		return count;
+	}
+	
+	public List findPageInfo(PageInfo pageInfo,String hql) throws Exception{
+		pageInfo.setTotal(this.getCounts(hql));
+		Query query = super.getSession().createQuery(hql);
+		query.setMaxResults(pageInfo.getPageLimit());
+		query.setFirstResult(pageInfo.getStart());
+		List list = query.list();
+		return list;
 	}
 }

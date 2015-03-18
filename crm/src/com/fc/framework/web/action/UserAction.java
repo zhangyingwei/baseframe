@@ -1,6 +1,7 @@
 package com.fc.framework.web.action;
 
 import java.util.List;
+import java.util.Map;
 
 import javax.annotation.Resource;
 
@@ -34,6 +35,15 @@ public class UserAction extends BaseAction{
 		this.user = user;
 	}
 
+	public String findPage() throws Exception {
+		List list = userService.findPage(super.getPageInfo()).getListret();
+		Map map = super.getReturnMap();
+		map.put("users", list);
+		map.put("pageInfo", super.getPageInfo());
+		super.getRequest().setAttribute("map", map);
+		return ActionReturn.SUCC;
+	}
+	
 	public String findAllUser() throws Exception{
 		List list = (List<User>) userService.findAllUser().getListret();
 		System.out.println("@:"+list.iterator().next());

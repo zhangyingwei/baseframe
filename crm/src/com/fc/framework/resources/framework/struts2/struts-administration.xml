@@ -11,6 +11,8 @@
 			<result name="success">/webpages/frame/index.jsp</result>
 			<result name="error" type="redirect">/</result>
 		</action>
+		
+		<!-- Module -->
 		<action name="tomenu" class="moduleAction" method="findAllModule">
 			<result name="success">/webpages/frame/menu/show.jsp</result>
 		</action>
@@ -28,6 +30,9 @@
 		</action>
 		<action name="updatemodule" class="moduleAction" method="updateModule">
 			<result name="success" type="redirectAction">tomenu.do</result>
+		</action>
+		<action name="getpage" class="moduleAction" method="findPage" >
+			<result name="success">/webpages/frame/menu/show.jsp</result>
 		</action>
 		
 		<!-- user -->
@@ -54,6 +59,9 @@
 		</action>
 		<action name="role2user" class="userAction" method="role2User">
 			<result name="success">/webpages/frame/user/user2role.jsp</result>
+		</action>
+		<action name="getuserpage" class="userAction" method="findPage" >
+			<result name="success">/webpages/frame/user/show.jsp</result>
 		</action>
 		
 		<!-- UserRole -->
@@ -82,6 +90,9 @@
 		</action>
 		<action name="toaddmodule2role" class="roleAction" method="toAddModule2Role">
 			<result name="success">/webpages/frame/role/role2module.jsp</result>
+		</action>
+		<action name="getrolepage" class="roleAction" method="findPage" >
+			<result name="success">/webpages/frame/role/show.jsp</result>
 		</action>
 		
 		<!-- RoleModule -->

@@ -1,9 +1,12 @@
 package com.fc.framework.web.service.impl;
 
+import com.fc.framework.web.common.PageInfo;
 import com.fc.framework.web.common.ReturnMessage;
 import com.fc.framework.web.entity.Role;
 
 public interface RoleServiceImpl{
+	public ReturnMessage findPage(PageInfo pageInfo) throws Exception;
+	
 	public ReturnMessage findAllRole() throws Exception;
 	
 	public ReturnMessage addRole(Role role) throws Exception;

@@ -1,7 +1,8 @@
-<%@ page language="java" import="java.util.*,com.fc.framework.web.entity.*" pageEncoding="utf-8" contentType="text/html; charset=utf-8"%>
+<%@ page language="java" import="java.util.*,com.fc.framework.web.entity.*,com.fc.framework.web.common.*" pageEncoding="utf-8" contentType="text/html; charset=utf-8"%>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+Map map = (Map)request.getAttribute("map");
 %>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
@@ -23,6 +24,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         function add(){
 			location.href="toaddmodule.do";
         }
+        function page(i){
+			location.href="getpage.do?pageInfo.currentPage="+i;
+        }
     </script>
     <style type="text/css">
         .auto-style1 {
@@ -43,7 +47,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         </thead>
         <tbody>
         	<%
-        		List<Module> modules = (List<Module>)request.getAttribute("modules");
+        		List<Module> modules = (List<Module>)map.get("modules");
         		for(Module m:modules){
         			String moduleid = m.getModuleid().toString();
         			String modulename = m.getModulename();
@@ -71,5 +75,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             </tr>
         </tbody>
     </table>
+    <%@include file="../common/fy.html" %>
 </body>
 </html>

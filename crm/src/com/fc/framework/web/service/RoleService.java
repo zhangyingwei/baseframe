@@ -7,6 +7,7 @@ import java.util.Map;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
+import com.fc.framework.web.common.PageInfo;
 import com.fc.framework.web.common.ReturnMessage;
 import com.fc.framework.web.entity.Role;
 import com.fc.framework.web.service.base.BaseService;
@@ -59,6 +60,14 @@ public class RoleService extends BaseService implements RoleServiceImpl {
 		session.delete(role);
 		ts.commit();
 		rMessage.setSucc(true);
+		return rMessage;
+	}
+
+	public ReturnMessage findPage(PageInfo pageInfo) throws Exception {
+		ReturnMessage rMessage = new ReturnMessage();
+		String hql = "from Role";
+		List list = super.findPageInfo(pageInfo, hql);
+		rMessage.setListret(list);
 		return rMessage;
 	}
 }

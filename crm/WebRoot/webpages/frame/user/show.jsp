@@ -2,6 +2,7 @@
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+Map map = (Map)request.getAttribute("map");
 %>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
@@ -47,6 +48,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 }]
             })
         }
+		function page(i){
+			location.href="getuserpage.do?pageInfo.currentPage="+i;
+        }
     </script>
     <style type="text/css">
         .auto-style1 {
@@ -72,7 +76,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         </thead>
         <tbody>
         	<%
-        		List<User> users = (List<User>)request.getAttribute("users");
+        		List<User> users = (List<User>)map.get("users");
         		for(User u:users){
         			%>
 		            <tr class="even">
@@ -103,5 +107,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             </tr>
         </tbody>
     </table>
+    <%@include file="../common/fy.html" %>
 </body>
 </html>

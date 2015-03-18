@@ -1,12 +1,15 @@
 package com.fc.framework.web.action;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.annotation.Resource;
 
 import com.fc.framework.web.action.base.BaseAction;
 import com.fc.framework.web.common.ActionReturn;
 import com.fc.framework.web.common.AppException;
+import com.fc.framework.web.common.PageInfo;
 import com.fc.framework.web.entity.Module;
 import com.fc.framework.web.service.impl.ModuleServiceImpl;
 import com.fc.framework.web.util.DateUtil;
@@ -26,10 +29,21 @@ public class ModuleAction extends BaseAction {
 		this.module = module;
 	}
 
+	public String findPage() throws Exception{
+		List list = moduleService.findPage(super.getPageInfo()).getListret();
+		Map map = super.getReturnMap();
+		map.put("modules", list);
+		map.put("pageInfo", super.pageInfo);
+		super.getRequest().setAttribute("map", map);
+		super.getRequest().getSession().setAttribute("modules", moduleService.findAll().getListret());
+		return ActionReturn.SUCC;
+	}
+	
 	public String findAllModule() throws Exception {
 		List list = moduleService.findAll().getListret();
-		super.getRequest().setAttribute("modules", list);
-		super.getRequest().getSession().setAttribute("modules", list);
+		Map map = super.getReturnMap();
+		map.put("modules", list);
+		super.getRequest().setAttribute("map", map);
 		return ActionReturn.SUCC;
 	}
 	
